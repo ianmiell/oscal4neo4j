@@ -27,7 +27,7 @@ MERGE (p)-[:INCLUDES_CONTROL]->(c1);
 // a synthetic compound id for the members of the additions array (see below)
 // so we're able to reference them in te next separate step.
 
-WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/baselines/rev4/json/FedRAMP_rev4_HIGH-baseline_profile.json" AS url
+WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/refs/heads/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json" AS url
 CALL apoc.load.json(url, '$.profile') YIELD value
 UNWIND value AS profile
 
@@ -68,7 +68,7 @@ SET propNode.layer = 'Profile';
 // 5.2b Add alteration parts:
 // (with props)
 
-WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/baselines/rev4/json/FedRAMP_rev4_HIGH-baseline_profile.json" AS url
+WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/refs/heads/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json" AS url
 CALL apoc.load.json(url, '$.profile') YIELD value
 UNWIND value AS profile
 UNWIND profile.modify.alters AS alteration
@@ -93,7 +93,7 @@ SET partPropNode.layer = 'Profile';
 
 // 5.2.c Add parts' subparts (with props):
 
-WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/baselines/rev4/json/FedRAMP_rev4_HIGH-baseline_profile.json" AS url
+WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/refs/heads/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json" AS url
 CALL apoc.load.json(url, '$.profile') YIELD value
 UNWIND value AS profile
 UNWIND profile.modify.alters AS alteration
@@ -120,7 +120,7 @@ SET partL2PropNode.layer = 'Profile';
 
 // 5.3 Load alterations: remove props
 
-WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/baselines/rev4/json/FedRAMP_rev4_HIGH-baseline_profile.json" AS url
+WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/refs/heads/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json" AS url
 CALL apoc.load.json(url, '$.profile') YIELD value
 UNWIND value AS profile
 
