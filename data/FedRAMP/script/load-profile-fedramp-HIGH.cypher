@@ -3,7 +3,7 @@
 
 // 5.1 Link controls:
 
-WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/baselines/rev4/json/FedRAMP_rev4_HIGH-baseline_profile.json" AS url
+WITH "https://raw.githubusercontent.com/GSA/fedramp-automation/refs/heads/master/dist/content/rev5/baselines/json/FedRAMP_rev5_HIGH-baseline_profile.json" AS url
 CALL apoc.load.json(url, '$.profile') YIELD value
 UNWIND value AS profile
 
