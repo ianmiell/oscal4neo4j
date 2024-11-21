@@ -153,22 +153,22 @@ WHERE b2.id = split(elink.href,'#')[1]
 
 MERGE (e)-[er:REFERENCES]->(b2);
 
-# 7. Assessment parts:
-# Update assessment-method-parts with their contained assessment-objects-parts:
-# name:assessment-objective, id:ac-2.1_obj, prose:...
-# name:assessment-method, id:ac-2.1_asm-examine, props[x].name:method, props[x].value:examine, 
-# name:assessment-method, id:ac-2.1_asm-test
-# assessment-objects: children of name:assessment-method.parts
+// 7. Assessment parts:
+// Update assessment-method-parts with their contained assessment-objects-parts:
+// name:assessment-objective, id:ac-2.1_obj, prose:...
+// name:assessment-method, id:ac-2.1_asm-examine, props[x].name:method, props[x].value:examine, 
+// name:assessment-method, id:ac-2.1_asm-test
+// assessment-objects: children of name:assessment-method.parts
 
-#set assessment layer on assessment parts:
-#xxx
+//set assessment layer on assessment parts:
+//xxx
 
 
-#  delete all:
-# MATCH (n:ControlParam) DETACH DELETE n;
-# MATCH (n:ControlProp) DETACH DELETE n;
-# MATCH (n:PartProp) DETACH DELETE n;
-# MATCH (n:rev5Control) DETACH DELETE n;
-# MATCH (n:rev5Group) DETACH DELETE n;
-# MATCH (n:PartLabel) DETACH DELETE n;
+//  delete all:
+// MATCH (n:ControlParam) DETACH DELETE n;
+// MATCH (n:ControlProp) DETACH DELETE n;
+// MATCH (n:PartProp) DETACH DELETE n;
+// MATCH (n:rev5Control) DETACH DELETE n;
+// MATCH (n:rev5Group) DETACH DELETE n;
+// MATCH (n:PartLabel) DETACH DELETE n;
 
